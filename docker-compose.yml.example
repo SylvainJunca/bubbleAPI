@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8
+    # Uncomment the following line for mac with M1 chip or above
+    # platform: linux/x86_64
+    container_name: bubble_api.db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "bubble"
+      MYSQL_USER: "bubble"
+      MYSQL_PASSWORD: "bubble"
+  web:
+    container_name: bubble_api.web
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file: .env

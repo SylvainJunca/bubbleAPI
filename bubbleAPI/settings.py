@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,20 +78,12 @@ WSGI_APPLICATION = 'bubbleAPI.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('DB_ENGINE', 'django.db.backends.mysql'),
+        'ENGINE': os.environ.get('DB_ENGINE', 'django.db.backends.postgresql_psycopg2'),
         'NAME': os.environ.get('DB_NAME', 'bubble'),
         'USER': os.environ.get('DB_USER', 'bubble'),
         'PASSWORD': os.environ.get('DB_PASSWORD', 'bubble'),
         'HOST': os.environ.get('DB_HOST', 'db'),
-        'PORT': 3306,
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
-        'TEST': {
-            'NAME': 'test_bubble',
-            'MIGRATE': False
-
-        }
+        'PORT': '5432'
     }
 }
 

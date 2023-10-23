@@ -2,17 +2,20 @@ version: "3.9"
 
 services:
   db:
-    image: mysql:8
-    # Uncomment the following line for mac with M1 chip or above
-    # platform: linux/x86_64
-    container_name: bubble_api.db
-    ports:
-      - "3306:3306"
+    image: postgres
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: "root"
-      MYSQL_DATABASE: "bubble"
-      MYSQL_USER: "bubble"
-      MYSQL_PASSWORD: "bubble"
+      POSTGRES_USER: "bubble"
+      POSTGRES_DB: "bubble"
+      POSTGRES_PASSWORD: "bubble"
+      POSTGRES_HOST: db
+    ports:
+      - "5432:5432"
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
   web:
     container_name: bubble_api.web
     build: .

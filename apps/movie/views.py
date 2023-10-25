@@ -17,3 +17,10 @@ class MovieDetail(APIView):
         tmdb_client = TMDBClient()
         response = tmdb_client.get_movie_details(movie_id=movie_id)
         return Response(data=response)
+
+
+class MovieGenreList(APIView):
+    def get(self, request, movie_id=None):
+        tmdb_client = TMDBClient()
+        response = tmdb_client.get_genre_list()
+        return Response(data=response)

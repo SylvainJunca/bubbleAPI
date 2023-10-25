@@ -25,6 +25,12 @@ class TMDBClient:
             headers=self.__create_headers())
         return response.json()
 
+    def get_genre_list(self, language='en'):
+        response = requests.get(
+            self.root_url + 'genre/movie/list?language=' + language,
+            headers=self.__create_headers())
+        return response.json()      
+
     def __create_headers(self):
         return {
             'Content-Type': 'application/json',

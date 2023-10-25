@@ -29,7 +29,7 @@ class TMDBClient:
         response = requests.get(
             self.root_url + 'genre/movie/list?language=' + language,
             headers=self.__create_headers())
-        return response.json()      
+        return response.json()
 
     def __create_headers(self):
         return {

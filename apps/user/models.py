@@ -28,6 +28,7 @@ class User(AbstractBaseUser, PermissionsMixin, UUIDModel, TimestampModel):
         return self.email
 
     class Meta:
+        db_table = "users"
         constraints = [
             UniqueConstraint(
                 Lower('username'),

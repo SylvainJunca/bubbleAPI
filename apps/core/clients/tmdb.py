@@ -1,4 +1,3 @@
-import tmdbsimple as tmdb
 import requests
 import os
 import logging

@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'apps.movie.apps.MovieConfig'
+    'apps.user.apps.UserConfig',
+    'apps.movie.apps.MovieConfig',
+    'apps.bubble.apps.BubbleConfig',
 ]
 
 MIDDLEWARE = [

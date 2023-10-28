@@ -4,10 +4,10 @@ from apps.user.serializers import UserSerializer
 
 
 class UserListView(generics.ListAPIView):
-    queryset = User.objects.public()
+    queryset = User.objects.all()
     serializer_class = UserSerializer
 
 
 class UserDetailView(generics.RetrieveAPIView):
-    queryset = User.objects.public()
+    queryset = User.objects.all()
     serializer_class = UserSerializer

@@ -2,7 +2,7 @@ from rest_framework import serializers
 from apps.movie.models import Movie
 
 
-class MovieSerializer(serializers.Serializer):
+class MovieSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Movie

@@ -6,7 +6,7 @@ from apps.core.clients.tmdb import TMDBClient
 
 class SearchMovie(APIView):
     def get(self, request):
-        search = request.query_params['search']
+        search = request.query_params["search"]
         tmdb_client = TMDBClient()
         response = tmdb_client.search(query=search)
         return Response(data=response)

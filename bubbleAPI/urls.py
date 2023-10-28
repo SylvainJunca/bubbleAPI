@@ -20,7 +20,7 @@ from apps.user.urls import user_patterns
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('movie/', include(movie_pattern)),
-    path('user/', include(user_patterns)),
+    path("admin/", admin.site.urls),
+    path("movie/", include(movie_pattern)),
+    path("user/", include(user_patterns)),
 ]

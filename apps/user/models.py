@@ -9,17 +9,18 @@ from .managers import UserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin, UUIDModel, TimestampModel):
-    email = models.EmailField('email', unique=True)
+    email = models.EmailField("email", unique=True)
     username = models.CharField(
-        'username',
+        "username",
         max_length=32,
         validators=[MinLengthValidator(3), MaxLengthValidator(32)],
-        null=True)
+        null=True,
+    )
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
     objects = UserManager()
@@ -30,8 +31,5 @@ class User(AbstractBaseUser, PermissionsMixin, UUIDModel, TimestampModel):
     class Meta:
         db_table = "users"
         constraints = [
-            UniqueConstraint(
-                Lower('username'),
-                name='username_unique'
-            ),
+            UniqueConstraint(Lower("username"), name="username_unique"),
         ]

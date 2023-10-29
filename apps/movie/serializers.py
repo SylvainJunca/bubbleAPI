@@ -2,7 +2,11 @@ from rest_framework import serializers
 from apps.movie.models import Movie
 
 
-class MovieSerializer(serializers.ModelSerializer):
+class MovieDetailSerializer(serializers.ModelSerializer):
+    title = serializers.CharField(required=True)
+    tmdb_id = serializers.IntegerField(required=True)
+    metadata = serializers.JSONField(required=True)
+
     class Meta:
         model = Movie
-        fields = ["id", "original_title", "tmdb_id", "metadata"]
+        fields = ["id", "title", "tmdb_id", "metadata"]

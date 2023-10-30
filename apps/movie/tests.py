@@ -1,6 +1,7 @@
 from unittest.mock import patch
+from urllib.error import HTTPError
 from rest_framework import status
-from rest_framework.exceptions import ErrorDetail
+from rest_framework.exceptions import ErrorDetail, NotFound
 from rest_framework.test import APITestCase
 from apps.movie.views import TMDBClient, MovieServices
 from apps.core.tests.tests_tmdb_client import MockedTMDBClient
@@ -9,10 +10,7 @@ from apps.core.tests.tests_tmdb_client import MockedTMDBClient
 class MovieTests(APITestCase):
     endpoint = "/movie/"
     existing_bubble_id = 12
-
-    mock_tmdb_api_search_response = {"status": "success", "results": []}
-
-    # mock_tmdb_api_detail_response = {"id" : }
+    not_existing_bubble_id = 1234
 
     def setUp(self) -> None:
         return super().setUp()
@@ -46,4 +44,19 @@ class MovieTests(APITestCase):
         assert mock_get_movie.called_once()
         mock_get_movie.assert_called_with(movie_id=self.existing_bubble_id)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.json(), expected_result)
+
+    def test_get_movie_with_incorrect_id(self):
+        response = self.client.get(self.endpoint + "incorrect_id")
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+    @patch.object(MovieServices, "get_movie")
+    def test_get_movie_unsuccessfully(self, mock_get_movie):
+        expected_result = {"tmdb_error": {"error": "error"}}
+        mock_get_movie.side_effect = NotFound(detail=expected_result)
+        response = self.client.get(self.endpoint + str(self.not_existing_bubble_id))
+
+        assert mock_get_movie.called_once()
+        mock_get_movie.assert_called_with(movie_id=self.not_existing_bubble_id)
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
         self.assertEqual(response.json(), expected_result)

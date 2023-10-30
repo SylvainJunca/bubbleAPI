@@ -2,9 +2,7 @@ import requests
 from requests.exceptions import HTTPError, RequestException
 import os
 import logging
-from rest_framework import status
-
-from rest_framework.response import Response
+from rest_framework.exceptions import NotFound
 
 
 class TMDBClient:
@@ -20,7 +18,7 @@ class TMDBClient:
                 headers=self.__create_headers(),
             )
             response.raise_for_status()
-            return response
+            return response.json()
         except (
             requests.exceptions.RequestException,
             requests.exceptions.HTTPError,
@@ -28,6 +26,7 @@ class TMDBClient:
             logging.error(
                 f"TMDB search error - search {query} - response {e.response.text}"
             )
+            raise NotFound(detail={"tmdb_error": e.response.json()})
 
     def get_movie_details(self, movie_id: int):
         try:
@@ -36,7 +35,7 @@ class TMDBClient:
                 headers=self.__create_headers(),
             )
             response.raise_for_status()
-            return response
+            return response.json()
         except (
             RequestException,
             HTTPError,
@@ -44,7 +43,7 @@ class TMDBClient:
             logging.error(
                 f"TMDB search error - search tmdb_id {movie_id} - response {e.response.text}"
             )
-            return Response({e.response.text}, status=status.HTTP_418_IM_A_TEAPOT)
+            raise NotFound(detail={"tmdb_error": e.response.json()})
 
     def get_genre_list(self, language="en"):
         response = requests.get(

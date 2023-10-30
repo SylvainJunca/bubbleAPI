@@ -8,7 +8,7 @@ from rest_framework.exceptions import NotFound
 class TMDBClient:
     def __init__(self) -> None:
         self.root_url = "https://api.themoviedb.org/3/"
-        self.bearer_token = os.environ.get("OMDB_TOKEN")
+        self.bearer_token = os.environ.get("TMDB_TOKEN")
 
     def search(self, query):
         try:

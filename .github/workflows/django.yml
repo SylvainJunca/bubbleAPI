@@ -34,6 +34,6 @@ jobs:
         sudo systemctl start postgresql
     - name: Run Tests
       env:
-        SECRET_KEY=#*x$oi6(l@afh4%k%ttjuk@t#bj@d!2fkfst*86ay&43d30=)-
+        SECRET_KEY={{secrets.SECRET_KEY}}
       run: |
         python manage.py test

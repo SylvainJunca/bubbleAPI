@@ -9,10 +9,6 @@
 			"editor.defaultFormatter": "ms-python.black-formatter",
 			"editor.formatOnSave": true
 		},
-		"flake8.args": [
-			"--max-line-length=88",
-			"extend-ignore=E203"
-		],
 		"python.analysis.autoImportCompletions": true,
 		"python.analysis.indexing": true,
 		"python.analysis.packageIndexDepths": [

@@ -8,7 +8,7 @@ from rest_framework.exceptions import NotFound
 class TMDBClient:
     def __init__(self) -> None:
         self.root_url = "https://api.themoviedb.org/3/"
-        self.bearer_token = os.environ.get("OMDB_TOKEN")
+        self.bearer_token = os.environ.get("TMDB_TOKEN")
 
     def search(self, query):
         try:
@@ -41,7 +41,7 @@ class TMDBClient:
             HTTPError,
         ) as e:
             logging.error(
-                f"TMDB search error - search tmdb_id {movie_id} - response {e.response.text}"
+                f"TMDB detail - tmdb_id {movie_id} - response {e.response.text}"
             )
             raise NotFound(detail={"tmdb_error": e.response.json()})
 

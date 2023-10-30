@@ -4,5 +4,28 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter",
+			"editor.formatOnSave": true
+		},
+		"flake8.args": [
+			"--max-line-length=88",
+			"extend-ignore=E203"
+		],
+		"python.analysis.autoImportCompletions": true,
+		"python.analysis.indexing": true,
+		"python.analysis.packageIndexDepths": [
+			{
+				"name": "django",
+				"depth": 10,
+				"includeAllSymbols": true,
+			},
+			{
+				"name": "rest_framework",
+				"depth": 10,
+				"includeAllSymbols": true,
+			}
+		]
+	}
 }

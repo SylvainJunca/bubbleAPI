@@ -16,9 +16,9 @@ jobs:
       postgres:
         image: postgres:latest
         env:
-          POSTGRES_USER: ${{secrets.DB_USER}}
-          POSTGRES_PASSWORD: ${{secrets.DB_PASSWORD}}
-          POSTGRES_DB: ${{secrets.DB_HOST}}
+          POSTGRES_USER: bubble
+          POSTGRES_PASSWORD: bubble
+          POSTGRES_DB: bubble
         ports:
           - 5432:5432
         # needed because the postgres container does not provide a healthcheck
@@ -43,15 +43,15 @@ jobs:
       env:
         SECRET_KEY: ${{secrets.SECRET_KEY}}
         APP_ENV: testing
-        DB_USER: ${{secrets.DB_USER}}
-        DB_PASSWORD: ${{secrets.DB_PASSWORD}}
-        DB_HOST: ${{secrets.DB_HOST}}
+        DB_USER: bubble
+        DB_PASSWORD: bubble
+        DB_HOST: 127.0.0.1
     - name: Run Tests
       env:
         SECRET_KEY: ${{secrets.SECRET_KEY}}
         APP_ENV: testing
-        DB_USER: ${{secrets.DB_USER}}
-        DB_PASSWORD: ${{secrets.DB_PASSWORD}}
-        DB_HOST: ${{secrets.DB_HOST}}
+        DB_USER: bubble
+        DB_PASSWORD: bubble
+        DB_HOST: 127.0.0.1
       run: |
         python manage.py test

@@ -86,7 +86,7 @@ DATABASES = {
         "NAME": os.environ.get("DB_NAME", "bubble"),
         "USER": os.environ.get("DB_USER", "bubble"),
         "PASSWORD": os.environ.get("DB_PASSWORD", "bubble"),
-        "HOST": os.environ.get("DB_HOST", "db"),
+        "HOST": os.environ.get("DB_HOST", "localhost"),
         "PORT": "5432",
     }
 }

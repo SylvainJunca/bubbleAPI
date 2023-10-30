@@ -1,12 +1,8 @@
-from django.contrib.admin.utils import lookup_field
-from rest_framework import generics, status
 from rest_framework.views import APIView
-from apps.movie.models import Movie
 from rest_framework.response import Response
 from apps.core.clients.tmdb import TMDBClient
 from apps.movie.serializers import MovieDetailSerializer, MovieDetailValidator
 from apps.movie.services import MovieServices
-from django.core.exceptions import ObjectDoesNotExist
 
 
 class SearchMovie(APIView):
@@ -27,7 +23,7 @@ class MovieDetail(APIView):
 
 
 class MovieGenreList(APIView):
-    def get(self, request, movie_id=None):
+    def get(self):
         tmdb_client = TMDBClient()
         response = tmdb_client.get_genre_list()
         return Response(data=response)

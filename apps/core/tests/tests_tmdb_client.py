@@ -1,16 +1,14 @@
-class MockedTMDBClient:
-    def search(self, query):
-        class ResponseObject:
-            @staticmethod
-            def json():
-                return {"count": 1, "results": [{"id": "movie_1"}]}
+from unittest import TestCase
+from unittest.mock import patch
 
-        return ResponseObject.json()
+from apps.core.clients.tmdb import requests, TMDBClient
 
-    def get_movie_details(self, movie_id=None):
-        class ResponseObject:
-            @staticmethod
-            def json():
-                return {"id": movie_id, "title": "title"}
 
-        return ResponseObject.json()
+class TestTMDBClient(TestCase):
+    def setUp(self) -> None:
+        return super().setUp()
+
+    @patch.object(requests, "get")
+    def test_class_can_be(self, mock_get):
+        print("#########")
+        self.assertEqual(True, True)

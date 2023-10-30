@@ -1,10 +1,8 @@
 from unittest.mock import patch
-from urllib.error import HTTPError
 from rest_framework import status
-from rest_framework.exceptions import ErrorDetail, NotFound
+from rest_framework.exceptions import NotFound
 from rest_framework.test import APITestCase
 from apps.movie.views import TMDBClient, MovieServices
-from apps.core.tests.tests_tmdb_client import MockedTMDBClient
 
 
 class MovieTests(APITestCase):

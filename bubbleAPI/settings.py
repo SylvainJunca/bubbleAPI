@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "apps.user.apps.UserConfig",
-    "apps.movie.apps.MovieConfig",
+    "apps.core",
+    "apps.user",
+    "apps.movie",
     "apps.bubble.apps.BubbleConfig",
 ]
 

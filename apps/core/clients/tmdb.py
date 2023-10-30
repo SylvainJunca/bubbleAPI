@@ -41,7 +41,7 @@ class TMDBClient:
             HTTPError,
         ) as e:
             logging.error(
-                f"TMDB search error - search tmdb_id {movie_id} - response {e.response.text}"
+                f"TMDB detail - tmdb_id {movie_id} - response {e.response.text}"
             )
             raise NotFound(detail={"tmdb_error": e.response.json()})
 

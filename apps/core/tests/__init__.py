@@ -1,1 +1,3 @@
-from apps.core.tests.tests_tmdb_client import *
+from .tests_tmdb_client import TestTMDBClient
+
+__all__ = [TestTMDBClient]

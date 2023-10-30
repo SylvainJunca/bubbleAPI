@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import patch
 
-from apps.core.clients.tmdb import requests, TMDBClient
+from apps.core.clients.tmdb import requests
 
 
 class TestTMDBClient(TestCase):

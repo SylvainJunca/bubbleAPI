@@ -6,7 +6,7 @@ from apps.movie.views import TMDBClient, MovieServices
 
 
 class MovieTests(APITestCase):
-    endpoint = "/movie/"
+    endpoint = "/movies/"
     existing_bubble_id = 12
     not_existing_bubble_id = 1234
 

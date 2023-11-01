@@ -21,6 +21,6 @@ from apps.user.urls import user_patterns
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("movie/", include(movie_pattern)),
-    path("user/", include(user_patterns)),
+    path("movies/", include(movie_pattern)),
+    path("users/", include(user_patterns)),
 ]

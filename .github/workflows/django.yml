@@ -3,9 +3,9 @@ name: Django CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, develop ]
 
 jobs:
   build:
@@ -44,6 +44,7 @@ jobs:
     - name: Run Tests
       env:
         SECRET_KEY: ${{secrets.SECRET_KEY}}
+        TMDB_TOKEN: ${{secrets.TMDB_TOKEN}}
         APP_ENV: testing
       run: |
         python manage.py test

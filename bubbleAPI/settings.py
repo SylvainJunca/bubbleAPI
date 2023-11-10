@@ -57,6 +57,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "bubbleAPI.urls"
+APPEND_SLASH = False
 
 TEMPLATES = [
     {

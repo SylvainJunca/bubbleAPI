@@ -16,11 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from apps.movie.urls import movie_pattern
-from apps.user.urls import user_patterns
+from apps.user.views import UserViewSet
+from rest_framework.routers import SimpleRouter
 
+
+class OptionalSlashRouter(SimpleRouter):
+    def __init__(self):
+        super().__init__()
+        self.trailing_slash = "/?"
+
+
+router = OptionalSlashRouter()
+router.register(r"users/?", UserViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("movies/", include(movie_pattern)),
-    path("users/", include(user_patterns)),
+    path("", include(router.urls)),
 ]

@@ -4,8 +4,7 @@ from apps.opinion.models import Opinion
 from apps.user.models import User
 from rest_framework.test import APITestCase
 from rest_framework import status
-from apps.opinion.value_objects import RatingChoices, AnticipationRatingChoices
-from django.urls import reverse
+from apps.opinion.value_objects import RatingChoices
 
 
 class OpinionTests(APITestCase):

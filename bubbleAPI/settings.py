@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "apps.core",
     "apps.user",
     "apps.movie",
+    "apps.opinion",
     "apps.bubble.apps.BubbleConfig",
 ]
 

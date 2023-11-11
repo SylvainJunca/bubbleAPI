@@ -24,3 +24,6 @@ class Opinion(UUIDModel, TimestampModel):
         if not self.watched and self.rating != RatingChoices.NOT_RATED:
             raise ValueError("Cannot rate a movie that has not been watched")
         super().save(*args, **kwargs)
+
+    class Meta:
+        db_table = "opinions"

@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from apps.movie.urls import movie_pattern
+from apps.opinion.views import OpinionViewSet
 from apps.user.views import UserViewSet
 from rest_framework.routers import SimpleRouter
 
@@ -28,6 +29,7 @@ class OptionalSlashRouter(SimpleRouter):
 
 router = OptionalSlashRouter()
 router.register(r"users/?", UserViewSet)
+router.register(r"opinions/?", OpinionViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

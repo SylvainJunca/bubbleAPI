@@ -10,7 +10,9 @@
             "anticipation_rating": 20,
             "rating": 0,
             "favorite": false,
-            "comment": "My cat recommended this movie to me."
+            "comment": "My cat recommended this movie to me.",
+            "created_at": "2023-01-01T00:00:00Z",
+            "updated_at": "2023-01-01T00:00:00Z"
         }
     },
     {
@@ -24,7 +26,9 @@
             "anticipation_rating": 30,
             "rating": 30,
             "favorite": true,
-            "comment": "I would watch it again!"
+            "comment": "I would watch it again!",
+            "created_at": "2023-01-02T00:00:00Z",
+            "updated_at": "2023-01-02T00:00:00Z"
         }
     },
     {
@@ -38,7 +42,9 @@
             "anticipation_rating": 20,
             "rating": 0,
             "favorite": false,
-            "comment": null
+            "comment": null,
+            "created_at": "2023-01-03T00:00:00Z",
+            "updated_at": "2023-01-03T00:00:00Z"
         }
     },
 
@@ -53,7 +59,9 @@
             "anticipation_rating": 10,
             "rating": 0,
             "favorite": false,
-            "comment": null
+            "comment": null,
+            "created_at": "2023-01-04T00:00:00Z",
+            "updated_at": "2023-01-04T00:00:00Z"
         }
     }
 ]

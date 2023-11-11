@@ -6,6 +6,7 @@ class OpinionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Opinion
         fields = [
+            "id",
             "user",
             "movie",
             "watched",

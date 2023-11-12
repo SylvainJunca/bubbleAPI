@@ -1,0 +1,38 @@
+[
+    {
+        "model": "movie.movie",
+        "pk": 1,
+        "fields": {
+            "title": "Finding Nemo",
+            "tmdb_id": 12,
+            "created_at": "2022-12-01T00:00:00Z",
+            "updated_at": "2022-12-01T00:00:00Z",
+            "metadata": {"id": 12, "adult": false, "title": "Finding Nemo", "video": false, "budget": 94000000, "genres": [{"id": 16, "name": "Animation"}, {"id": 10751, "name": "Family"}], "status": "Released", "imdb_id": "tt0266543", "revenue": 940335536, "runtime": 100, "tagline": "There are 3.7 trillion fish in the ocean. They're looking for one.", "homepage": "http://movies.disney.com/finding-nemo", "overview": "Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist's office aquarium. It's up to his worrisome father Marlin and a friendly but forgetful fish Dory to bring Nemo home -- meeting vegetarian sharks, surfer dude turtles, hypnotic jellyfish, hungry seagulls, and more along the way.", "popularity": 96.329, "vote_count": 18143, "poster_path": "/ggQ6o8X5984OCh3kZi2UIJQJY5y.jpg", "release_date": "2003-05-30", "vote_average": 7.825, "backdrop_path": "/h3uqFk7sZRJvLZDdLiFB9qwbL07.jpg", "original_title": "Finding Nemo", "spoken_languages": [{"name": "English", "iso_639_1": "en", "english_name": "English"}], "original_language": "en", "production_companies": [{"id": 3, "name": "Pixar", "logo_path": "/1TjvGVDMYsj6JBxOAkUHpPEwLf7.png", "origin_country": "US"}], "production_countries": [{"name": "United States of America", "iso_3166_1": "US"}], "belongs_to_collection": {"id": 137697, "name": "Finding Nemo Collection", "poster_path": "/xwggrEugjcJDuabIWvK2CpmK91z.jpg", "backdrop_path": "/2hC8HHRUvwRljYKIcQDMyMbLlxz.jpg"}}
+        }
+    },
+    {
+        "model": "movie.movie",
+        "pk": 2,
+        "fields": {
+            "title": "Star Wars",
+            "tmdb_id": 11,
+            "created_at": "2022-12-02T00:00:00Z",
+            "updated_at": "2022-12-02T00:00:00Z",
+            "metadata": {"id": 11, "adult": false, "title": "Star Wars", "video": false, "budget": 11000000, "genres": [{"id": 12, "name": "Adventure"}, {"id": 28, "name": "Action"}, {"id": 878, "name": "Science Fiction"}], "status": "Released", "imdb_id": "tt0076759", "revenue": 775398007, "runtime": 121, "tagline": "A long time ago in a galaxy far, far away...", "homepage": "http://www.starwars.com/films/star-wars-episode-iv-a-new-hope", "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.", "popularity": 89.306, "vote_count": 19253, "poster_path": "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg", "release_date": "1977-05-25", "vote_average": 8.204, "backdrop_path": "/4qCqAdHcNKeAHcK8tJ8wNJZa9cx.jpg", "original_title": "Star Wars", "spoken_languages": [{"name": "English", "iso_639_1": "en", "english_name": "English"}], "original_language": "en", "production_companies": [{"id": 1, "name": "Lucasfilm Ltd.", "logo_path": "/o86DbpburjxrqAzEDhXZcyE8pDb.png", "origin_country": "US"}, {"id": 25, "name": "20th Century Fox", "logo_path": "/qZCc1lty5FzX30aOCVRBLzaVmcp.png", "origin_country": "US"}], "production_countries": [{"name": "United States of America", "iso_3166_1": "US"}], "belongs_to_collection": {"id": 10, "name": "Star Wars Collection", "poster_path": "/gq5Wi7i4SF3lo4HHkJasDV95xI9.jpg", "backdrop_path": "/d8duYyyC9J5T825Hg7grmaabfxQ.jpg"}}
+        }
+    },
+    {
+        "model": "movie.movie",
+        "pk": 3,
+        "fields": {
+            "title": "BPM (Beats per Minute)",
+            "tmdb_id": 451945,
+            "created_at": "2022-12-03T00:00:00Z",
+            "updated_at": "2022-12-03T00:00:00Z",
+            "metadata": {"id": 451945, "adult": false, "title": "BPM (Beats per Minute)", "video": false, "budget": 6600000, "genres": [{"id": 18, "name": "Drama"}], "status": "Released", "imdb_id": "tt6135348", "revenue": 7632420, "runtime": 135, "tagline": "", "homepage": "http://bpm.film", "overview": "Paris, in the early 1990s: a group of young activists is desperately tied to finding the cure against an unknown lethal disease. They target the pharmaceutical labs that are retaining potential cures, and multiply direct actions, with the hope of saving their lives as well as the ones of future generations.", "popularity": 9.603, "vote_count": 1281, "poster_path": "/azLtGx5ZhdTSP2b4oNLWtiE51OW.jpg", "release_date": "2017-08-23", "vote_average": 7.728, "backdrop_path": "/1pyUrlbTVCkGkcu7LsGMqxuCtkP.jpg", "original_title": "120 battements par minute", "spoken_languages": [{"name": "Français", "iso_639_1": "fr", "english_name": "French"}], "original_language": "fr", "production_companies": [{"id": 591, "name": "France 3 Cinéma", "logo_path": "/q5I5RDwMEiqoNmfaJgd2LraEOJY.png", "origin_country": "FR"}, {"id": 5162, "name": "Memento Films Production", "logo_path": "/ePS4wgTIC1hjOnnmxYJmYNEzAR.png", "origin_country": "FR"}, {"id": 11779, "name": "Page 114", "logo_path": null, "origin_country": "FR"}, {"id": 58568, "name": "Les Films de Pierre", "logo_path": "/2qxPHPKa29w2MsaPKpYRfBnQcyq.png", "origin_country": "FR"}, {"id": 108769, "name": "Playtime", "logo_path": "/riBQBny2Z3la03Wy8I27Ahn2spC.png", "origin_country": "FR"}], "production_countries": [{"name": "France", "iso_3166_1": "FR"}], "belongs_to_collection": null}
+        }
+    }
+]
+
+
+

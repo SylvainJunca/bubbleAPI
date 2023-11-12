@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "apps.core",
     "apps.user",
     "apps.movie",
+    "apps.opinion",
     "apps.bubble.apps.BubbleConfig",
 ]
 
@@ -57,7 +58,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "bubbleAPI.urls"
-APPEND_SLASH = False
+APPEND_SLASH = True
 
 TEMPLATES = [
     {
